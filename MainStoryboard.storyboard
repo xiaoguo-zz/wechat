@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="776" y="-114"/>
         </scene>
-        <!--Table View Controller - Recipents-->
+        <!--Camera View Controller - Recipents-->
         <scene sceneID="9wP-Rn-9ds">
             <objects>
-                <tableViewController id="jYL-HO-72f" sceneMemberID="viewController">
+                <tableViewController id="jYL-HO-72f" customClass="CameraViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jQs-14-Zft">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,11 +114,49 @@
                             <outlet property="delegate" destination="jYL-HO-72f" id="het-wJ-I3a"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recipents" id="6PN-lf-iOH"/>
+                    <navigationItem key="navigationItem" title="Recipents" id="6PN-lf-iOH">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="WrN-z6-yIp">
+                            <connections>
+                                <action selector="cancel:" destination="jYL-HO-72f" id="xzT-4H-zTm"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="j1W-QU-sYu">
+                            <connections>
+                                <action selector="send:" destination="jYL-HO-72f" id="Ee6-n8-6A0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFF-79-3mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="371" y="591"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="IL0-v5-q4b">
+            <objects>
+                <viewController id="qht-sv-5ps" customClass="ImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BjH-wM-uxS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0L-2V-H43"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q0L-2V-H43" firstAttribute="bottom" secondItem="BjH-wM-uxS" secondAttribute="bottom" type="default" id="FDQ-Jw-P4c"/>
+                            <constraint firstItem="Q0L-2V-H43" firstAttribute="trailing" secondItem="BjH-wM-uxS" secondAttribute="trailing" type="default" id="FJe-2t-f4z"/>
+                            <constraint firstItem="Q0L-2V-H43" firstAttribute="leading" secondItem="BjH-wM-uxS" secondAttribute="leading" type="default" id="ev4-x4-llp"/>
+                            <constraint firstItem="Q0L-2V-H43" firstAttribute="top" secondItem="BjH-wM-uxS" secondAttribute="top" type="default" id="gOL-U9-ZDc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0tl-RV-Eb2"/>
+                    <connections>
+                        <outlet property="imageView" destination="Q0L-2V-H43" id="EdC-BS-3KP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oro-fy-WhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776" y="-1496"/>
         </scene>
         <!--Inbox View Controller - Wechat-->
         <scene sceneID="up9-kC-6S0">
@@ -153,6 +191,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="VDg-PL-f7M" kind="push" identifier="showLogin" id="e7l-02-QD9"/>
+                        <segue destination="qht-sv-5ps" kind="push" identifier="showImage" id="h3o-lr-EXc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2I-Wn-8eQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -169,7 +208,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMV-97-GvO">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="273" id="nHq-aD-UI3"/>
+                                    <constraint firstAttribute="height" constant="31" id="zOB-zo-HtQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Log in">
@@ -184,6 +223,9 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zmr-Qf-2wQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="nTx-am-QvV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -219,18 +261,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Nxe-k6-IKI" firstAttribute="leading" secondItem="UMV-97-GvO" secondAttribute="leading" type="default" id="41U-w5-kf8"/>
-                            <constraint firstItem="UMV-97-GvO" firstAttribute="top" secondItem="1SZ-wD-VCg" secondAttribute="top" constant="134" id="7Dl-jv-KFd"/>
-                            <constraint firstItem="WDg-K8-THu" firstAttribute="centerY" secondItem="Nxe-k6-IKI" secondAttribute="centerY" type="default" id="Ays-Xh-wP2"/>
-                            <constraint firstItem="WDg-K8-THu" firstAttribute="top" secondItem="1SZ-wD-VCg" secondAttribute="top" constant="201" id="GeR-Dy-E2Q"/>
-                            <constraint firstItem="WDg-K8-THu" firstAttribute="leading" secondItem="Nxe-k6-IKI" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="LA8-lC-369"/>
+                            <constraint firstItem="WDg-K8-THu" firstAttribute="baseline" secondItem="Nxe-k6-IKI" secondAttribute="baseline" type="default" id="EAK-BH-oPV"/>
                             <constraint firstItem="rIf-y5-Nzk" firstAttribute="leading" secondItem="UMV-97-GvO" secondAttribute="leading" type="default" id="Lgz-bd-O6m"/>
                             <constraint firstAttribute="trailing" secondItem="UMV-97-GvO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="RmC-bK-ULO"/>
-                            <constraint firstItem="rIf-y5-Nzk" firstAttribute="top" secondItem="1SZ-wD-VCg" secondAttribute="top" constant="86" id="V30-ts-Yni"/>
                             <constraint firstAttribute="trailing" secondItem="Zmr-Qf-2wQ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ZJ0-gi-l5A"/>
-                            <constraint firstItem="WDg-K8-THu" firstAttribute="baseline" secondItem="Nxe-k6-IKI" secondAttribute="baseline" type="default" id="cYk-W5-uzG"/>
-                            <constraint firstItem="Zmr-Qf-2wQ" firstAttribute="top" secondItem="1SZ-wD-VCg" secondAttribute="top" constant="27" id="iro-oU-cuF"/>
+                            <constraint firstItem="rIf-y5-Nzk" firstAttribute="top" secondItem="1SZ-wD-VCg" secondAttribute="top" constant="58" id="bAO-Tj-Iid"/>
+                            <constraint firstItem="WDg-K8-THu" firstAttribute="top" secondItem="1SZ-wD-VCg" secondAttribute="top" constant="142" id="g0V-C7-ga5"/>
+                            <constraint firstItem="UMV-97-GvO" firstAttribute="top" secondItem="1SZ-wD-VCg" secondAttribute="top" constant="101" id="iwk-H6-om6"/>
                             <constraint firstItem="Zmr-Qf-2wQ" firstAttribute="leading" secondItem="rIf-y5-Nzk" secondAttribute="leading" type="default" id="tss-rk-T29"/>
+                            <constraint firstItem="Nxe-k6-IKI" firstAttribute="top" secondItem="1SZ-wD-VCg" secondAttribute="top" constant="153" id="vgA-sU-tMR"/>
+                            <constraint firstAttribute="trailing" secondItem="WDg-K8-THu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wRY-eF-izn"/>
                             <constraint firstAttribute="trailing" secondItem="rIf-y5-Nzk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xEJ-YN-Pxq"/>
+                            <constraint firstItem="Zmr-Qf-2wQ" firstAttribute="top" secondItem="1SZ-wD-VCg" secondAttribute="top" constant="15" id="zda-Nm-a5r"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Wechat" id="vZq-XQ-s3l"/>
@@ -370,11 +412,24 @@
         <image name="inbox.png" width="32" height="21"/>
     </resources>
     <classes>
+        <class className="CameraViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CameraViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="send:"/>
+            </relationships>
+        </class>
         <class className="EditFriendsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EditFriendsViewController.h"/>
         </class>
         <class className="FriendsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FriendsViewController.h"/>
+        </class>
+        <class className="ImageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
         </class>
         <class className="InboxViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InboxViewController.h"/>

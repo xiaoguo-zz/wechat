@@ -38,10 +38,13 @@
 		021D334F17CB98CF008A75A2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021D334E17CB98CF008A75A2 /* Security.framework */; };
 		021D335117CB98D7008A75A2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021D335017CB98D7008A75A2 /* StoreKit.framework */; };
 		021D335317CB98E0008A75A2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021D335217CB98E0008A75A2 /* SystemConfiguration.framework */; };
+		0273021717CE3A0D00FB7671 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0273021617CE3A0D00FB7671 /* CameraViewController.m */; };
 		027834A117CDAFB500DC98E1 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 027834A017CDAFB500DC98E1 /* FriendsViewController.m */; };
 		029F9F5A17CC4F0300264F91 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029F9F5917CC4F0300264F91 /* LoginViewController.m */; };
 		029F9F5D17CC4F1900264F91 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029F9F5C17CC4F1900264F91 /* SignupViewController.m */; };
 		029F9F6317CC688200264F91 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029F9F6217CC688200264F91 /* EditFriendsViewController.m */; };
+		02CBBFC017D04D4B0091C93D /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CBBFBF17D04D4A0091C93D /* ImageViewController.m */; };
+		02CBBFC217D04EB90091C93D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CBBFC117D04EB90091C93D /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +84,8 @@
 		021D334E17CB98CF008A75A2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		021D335017CB98D7008A75A2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		021D335217CB98E0008A75A2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0273021517CE3A0D00FB7671 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
+		0273021617CE3A0D00FB7671 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ../CameraViewController.m; sourceTree = "<group>"; };
 		0278349F17CDAFB500DC98E1 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsViewController.h; path = ../FriendsViewController.h; sourceTree = "<group>"; };
 		027834A017CDAFB500DC98E1 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsViewController.m; path = ../FriendsViewController.m; sourceTree = "<group>"; };
 		029F9F5817CC4F0300264F91 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
@@ -89,6 +94,9 @@
 		029F9F5C17CC4F1900264F91 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupViewController.m; path = ../SignupViewController.m; sourceTree = "<group>"; };
 		029F9F6117CC688200264F91 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditFriendsViewController.h; path = ../EditFriendsViewController.h; sourceTree = "<group>"; };
 		029F9F6217CC688200264F91 /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditFriendsViewController.m; path = ../EditFriendsViewController.m; sourceTree = "<group>"; };
+		02CBBFBE17D04D4A0091C93D /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageViewController.h; path = ../ImageViewController.h; sourceTree = "<group>"; };
+		02CBBFBF17D04D4A0091C93D /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageViewController.m; path = ../ImageViewController.m; sourceTree = "<group>"; };
+		02CBBFC117D04EB90091C93D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02CBBFC217D04EB90091C93D /* MediaPlayer.framework in Frameworks */,
 				021D334517CB989D008A75A2 /* AudioToolbox.framework in Frameworks */,
 				021D334817CB98AA008A75A2 /* CFNetwork.framework in Frameworks */,
 				021D334917CB98AA008A75A2 /* CoreLocation.framework in Frameworks */,
@@ -118,6 +127,7 @@
 		021D32FD17CB05C2008A75A2 = {
 			isa = PBXGroup;
 			children = (
+				02CBBFC117D04EB90091C93D /* MediaPlayer.framework */,
 				021D332617CB05D8008A75A2 /* MainStoryboard.storyboard */,
 				021D332817CB0DF0008A75A2 /* Images */,
 				021D330F17CB05C2008A75A2 /* wechat */,
@@ -169,6 +179,10 @@
 				029F9F6217CC688200264F91 /* EditFriendsViewController.m */,
 				0278349F17CDAFB500DC98E1 /* FriendsViewController.h */,
 				027834A017CDAFB500DC98E1 /* FriendsViewController.m */,
+				0273021517CE3A0D00FB7671 /* CameraViewController.h */,
+				0273021617CE3A0D00FB7671 /* CameraViewController.m */,
+				02CBBFBE17D04D4A0091C93D /* ImageViewController.h */,
+				02CBBFBF17D04D4A0091C93D /* ImageViewController.m */,
 				021D331017CB05C2008A75A2 /* Supporting Files */,
 			);
 			path = wechat;
@@ -288,6 +302,8 @@
 				029F9F5D17CC4F1900264F91 /* SignupViewController.m in Sources */,
 				029F9F6317CC688200264F91 /* EditFriendsViewController.m in Sources */,
 				027834A117CDAFB500DC98E1 /* FriendsViewController.m in Sources */,
+				0273021717CE3A0D00FB7671 /* CameraViewController.m in Sources */,
+				02CBBFC017D04D4B0091C93D /* ImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
